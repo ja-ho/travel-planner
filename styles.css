@@ -585,6 +585,8 @@ a:hover { text-decoration: underline; }
   color: var(--text-secondary);
   vertical-align: top;
   line-height: 1.55;
+  word-break: keep-all;
+  min-width: 5rem;
 }
 
 .table-wrap tr:last-child td { border-bottom: none; }
@@ -817,10 +819,81 @@ a:hover { text-decoration: underline; }
   .markdown-body h1 { font-size: 1.3rem; }
   .markdown-body h2 { font-size: 1.08rem; }
 
-  .table-wrap th { font-size: 0.78rem; padding: 8px 10px; }
+  .table-wrap table { width: max-content; min-width: 100%; }
+  .table-wrap th { font-size: 0.78rem; padding: 8px 10px; min-width: 5rem; }
   .table-wrap td { font-size: 0.82rem; padding: 7px 10px; }
 
   #back-to-top { bottom: 18px; right: 18px; width: 42px; height: 42px; }
+}
+
+
+/* =========================================================
+   6컬럼 와이드 테이블 → 모바일 카드 레이아웃
+   ========================================================= */
+.table-wide-cards { display: none; }
+
+@media (max-width: 640px) {
+  .table-wide-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 1.2rem 0;
+  }
+
+  .table-wrap.table-wide { display: none; }
+
+  .table-card {
+    background: var(--card-bg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .table-card-header {
+    background: var(--accent-bg);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.88rem;
+    padding: 10px 14px;
+    border-bottom: 2px solid var(--accent);
+    word-break: keep-all;
+  }
+
+  .table-card-body {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    margin: 0;
+    padding: 0;
+  }
+
+  .table-card-body dt {
+    padding: 8px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border);
+    white-space: nowrap;
+    background: rgba(0,0,0,0.016);
+  }
+
+  .table-card-body dd {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    word-break: keep-all;
+    line-height: 1.55;
+  }
+
+  .table-card-body dt:last-of-type,
+  .table-card-body dd:last-of-type { border-bottom: none; }
+}
+
+@media print {
+  .table-wide-cards { display: none; }
+  .table-wrap.table-wide { display: block; }
+  .table-wrap.table-wide table { display: table; }
 }
 
 

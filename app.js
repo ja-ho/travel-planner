@@ -122,11 +122,59 @@ function buildErrorEl(tabId, detail) {
   return wrap;
 }
 
+// ─── 모바일 테이블 향상 ────────────────────────────────────
+function enhanceTables(container) {
+  container.querySelectorAll('.table-wrap').forEach((wrap) => {
+    const table = wrap.querySelector('table');
+    if (!table) return;
+
+    const headerCells = table.querySelectorAll('thead tr:first-child th, tr:first-child th');
+    if (headerCells.length >= 6) {
+      wrap.classList.add('table-wide');
+      wrap.insertAdjacentElement('afterend', buildWideTableCards(table, headerCells));
+    }
+  });
+}
+
+function buildWideTableCards(table, headerCells) {
+  const headers = Array.from(headerCells).map((th) => th.textContent.trim());
+  const cardContainer = document.createElement('div');
+  cardContainer.className = 'table-wide-cards';
+
+  table.querySelectorAll('tbody tr').forEach((row) => {
+    const cells = row.querySelectorAll('td');
+    if (!cells.length) return;
+
+    const card = document.createElement('div');
+    card.className = 'table-card';
+
+    const cardHeader = document.createElement('div');
+    cardHeader.className = 'table-card-header';
+    cells[0].childNodes.forEach((node) => cardHeader.appendChild(node.cloneNode(true)));
+    card.appendChild(cardHeader);
+
+    const list = document.createElement('dl');
+    list.className = 'table-card-body';
+    for (let i = 1; i < cells.length && i < headers.length; i++) {
+      const dt = document.createElement('dt');
+      dt.textContent = headers[i];
+      const dd = document.createElement('dd');
+      cells[i].childNodes.forEach((node) => dd.appendChild(node.cloneNode(true)));
+      list.append(dt, dd);
+    }
+    card.appendChild(list);
+    cardContainer.appendChild(card);
+  });
+
+  return cardContainer;
+}
+
 function buildMarkdownEl(sanitizedHtml) {
   const wrap = document.createElement('div');
   wrap.className = 'markdown-body';
   // sanitizedHtml은 parseMarkdown() 내부에서 DOMPurify를 통과한 안전한 문자열
   wrap.innerHTML = sanitizedHtml; // eslint-disable-line -- sanitized by DOMPurify
+  enhanceTables(wrap);
   return wrap;
 }
 
