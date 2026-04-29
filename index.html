@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko" data-tab-color="pink">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="에버랜드 당일치기 여행 계획 — 부부 + 영유아 2명 (30개월·14개월)">
+  <title>🌷 에버랜드 당일치기 여행 계획</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 스크롤 진행 바 -->
+  <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- 헤더: 여행 카드 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-card">
+        <div class="header-card-content">
+          <div class="header-title-row">
+            <span class="header-main-emoji">🎢</span>
+            <div>
+              <h1 class="header-title">에버랜드 당일치기</h1>
+              <p class="header-subtitle">2026 튤립 페스티벌 · 영유아 가족 여행 계획서</p>
+            </div>
+            <span id="dday-badge" class="dday-badge" aria-label="여행까지 남은 일수">—</span>
+          </div>
+
+          <div class="header-meta-grid">
+            <div class="meta-item">
+              <span class="meta-icon">📅</span>
+              <span>2026.04.28 (화) 평일</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🚗</span>
+              <span>서울 여의도 → 경기 용인</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">👨‍👩‍👧‍👦</span>
+              <span>부부 + 30개월·14개월 영유아</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🌷</span>
+              <span>튤립 페스티벌 종반·절정</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🎯</span>
+              <span>무리 없는 일정 최우선</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-icon">🆓</span>
+              <span>영유아 2명 무료 입장 (36개월 미만)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 스탬프 장식 -->
+        <div class="header-stamp" aria-hidden="true">
+          <div class="stamp-ring">
+            <div class="stamp-text">
+              <span>EVERLAND</span>
+              <span>★</span>
+              <span>2026.04.28</span>
+              <span>★</span>
+              <span>FAMILY</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 사진 갤러리 플레이스홀더 -->
+      <div class="photo-gallery-placeholder" role="img" aria-label="여행 사진 갤러리 공간 (미입력)">
+        <div class="gallery-slots">
+          <div class="gallery-slot gallery-slot--large">
+            <span class="gallery-icon">📸</span>
+            <span class="gallery-hint">대표 사진</span>
+          </div>
+          <div class="gallery-slot">
+            <span class="gallery-icon">🌷</span>
+            <span class="gallery-hint">튤립 가든</span>
+          </div>
+          <div class="gallery-slot">
+            <span class="gallery-icon">🦁</span>
+            <span class="gallery-hint">사파리</span>
+          </div>
+          <div class="gallery-slot">
+            <span class="gallery-icon">🎠</span>
+            <span class="gallery-hint">캐로셀</span>
+          </div>
+          <div class="gallery-slot gallery-slot--hide-sm">
+            <span class="gallery-icon">🦒</span>
+            <span class="gallery-hint">로스트밸리</span>
+          </div>
+        </div>
+        <p class="gallery-caption">📷 여행 사진을 여기에 추가할 수 있어요 — 각 슬롯에 이미지를 교체하세요</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- 탭 네비게이션 -->
+  <nav class="tab-nav" id="tab-nav" aria-label="여행 계획 문서 탭">
+    <div class="tab-nav-inner">
+      <button class="tab-btn" data-tab="input" data-color="neutral" aria-selected="false">
+        <span class="tab-emoji">📝</span>
+        <span class="tab-label">입력</span>
+      </button>
+      <button class="tab-btn" data-tab="analysis" data-color="pink" aria-selected="false">
+        <span class="tab-emoji">🌷</span>
+        <span class="tab-label">목적지 분석</span>
+      </button>
+      <button class="tab-btn" data-tab="itinerary" data-color="green" aria-selected="false">
+        <span class="tab-emoji">📅</span>
+        <span class="tab-label">일정표</span>
+      </button>
+      <button class="tab-btn" data-tab="budget" data-color="yellow" aria-selected="false">
+        <span class="tab-emoji">💰</span>
+        <span class="tab-label">예산</span>
+      </button>
+      <button class="tab-btn" data-tab="guide" data-color="blue" aria-selected="false">
+        <span class="tab-emoji">🗺️</span>
+        <span class="tab-label">현지 가이드</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+    <div class="tab-panel" id="panel-input"     data-color="neutral" role="tabpanel" aria-label="입력 정보"></div>
+    <div class="tab-panel" id="panel-analysis"  data-color="pink"    role="tabpanel" aria-label="목적지 분석"></div>
+    <div class="tab-panel" id="panel-itinerary" data-color="green"   role="tabpanel" aria-label="일정표"></div>
+    <div class="tab-panel" id="panel-budget"    data-color="yellow"  role="tabpanel" aria-label="예산"></div>
+    <div class="tab-panel" id="panel-guide"     data-color="blue"    role="tabpanel" aria-label="현지 가이드"></div>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-note">
+        🤖 AI 여행 계획 하네스(travel-planner)로 자동 생성 &nbsp;·&nbsp; 기준일 2026-04-28
+      </p>
+      <p class="footer-warning">
+        ⚠️ 운영시간·티켓 가격 등 공식 정보는 출발 전
+        <a href="https://www.everland.com/" target="_blank" rel="noopener noreferrer">에버랜드 공식 사이트</a>에서
+        반드시 재확인하세요.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 맨 위로 버튼 -->
+  <button id="back-to-top" aria-label="페이지 맨 위로 이동" title="맨 위로">↑</button>
+
+  <!-- 라이브러리 + 앱 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
