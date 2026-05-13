@@ -1,6 +1,6 @@
 /* =========================================================
    app.js — 남양주·수원 통합 비교 뷰어
-   2-level 탭: [남양주/수원/비교] × [입력/목적지/일정/가이드]
+   2-level 탭: [남양주/수원/비교] × [목적지/일정/가이드]
    ========================================================= */
 
 // ─── 상수 ──────────────────────────────────────────────────
@@ -30,7 +30,6 @@ const TRIPS = {
 
 // 서브탭 (남양주/수원 내부에서 사용)
 const SUBTABS = [
-  { id: 'input',       file: '00_input.md',                emoji: '📝', label: '입력' },
   { id: 'destination', file: '01_destination_analysis.md', emoji: '🌷', label: '목적지' },
   { id: 'itinerary',   file: '02_itinerary.md',            emoji: '📅', label: '일정' },
   { id: 'guide',       file: '05_local_guide.md',          emoji: '🗺️', label: '현지 가이드' },
