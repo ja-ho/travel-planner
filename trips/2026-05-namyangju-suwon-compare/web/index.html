@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko" data-tab-color="green">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="어머니 66세 생신 당일치기 여행 후보 비교 — 남양주 vs 수원 (2026-05-16)">
+  <title>🎂 어머니 생신 여행 후보 비교 — 남양주 vs 수원</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 스크롤 진행 바 -->
+  <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
+  <!-- 헤더 -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-card">
+        <div class="header-title-row">
+          <span class="header-main-emoji">🎂</span>
+          <div>
+            <h1 class="header-title">어머니 66세 생신 여행 후보 비교</h1>
+            <p class="header-subtitle">남양주 vs 수원 · 당일치기 가족 여행 계획서</p>
+          </div>
+          <span id="dday-badge" class="dday-badge" aria-label="여행까지 남은 일수">—</span>
+        </div>
+
+        <div class="header-meta-grid">
+          <div class="meta-item">
+            <span class="meta-icon">📅</span>
+            <span>2026.05.16 (토)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">👨‍👩‍👧‍👦</span>
+            <span>총 8명 · 시니어 2 / 성인 4 / 미취학 2</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🚗</span>
+            <span>자차 2대 · 카톡 위치공유</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-icon">🎯</span>
+            <span>당일치기 · 평탄 동선 우선</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 상위 탭: 남양주 / 수원 / 비교 -->
+  <nav class="tab-nav" id="tab-nav" aria-label="여행지 선택 탭">
+    <div class="tab-nav-inner">
+      <button class="tab-btn" data-tab="namyangju" data-color="green" aria-selected="false">
+        <span class="tab-emoji">🌿</span>
+        <span class="tab-label">남양주</span>
+      </button>
+      <button class="tab-btn" data-tab="suwon" data-color="pink" aria-selected="false">
+        <span class="tab-emoji">🌸</span>
+        <span class="tab-label">수원</span>
+      </button>
+      <button class="tab-btn" data-tab="compare" data-color="blue" aria-selected="false">
+        <span class="tab-emoji">⚖️</span>
+        <span class="tab-label">비교</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 서브탭: 입력 / 목적지 / 일정 / 가이드 (compare에서는 숨김) -->
+  <nav class="subtab-nav" id="subtab-nav" aria-label="문서 카테고리 서브탭">
+    <div class="subtab-nav-inner">
+      <button class="subtab-btn" data-subtab="input" aria-selected="false">
+        <span class="subtab-emoji">📝</span>
+        <span class="subtab-label">입력</span>
+      </button>
+      <button class="subtab-btn" data-subtab="destination" aria-selected="false">
+        <span class="subtab-emoji">🌷</span>
+        <span class="subtab-label">목적지</span>
+      </button>
+      <button class="subtab-btn" data-subtab="itinerary" aria-selected="false">
+        <span class="subtab-emoji">📅</span>
+        <span class="subtab-label">일정</span>
+      </button>
+      <button class="subtab-btn" data-subtab="guide" aria-selected="false">
+        <span class="subtab-emoji">🗺️</span>
+        <span class="subtab-label">현지 가이드</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 메인 콘텐츠 -->
+  <main class="main-content">
+    <!-- 마크다운 패널 (남양주/수원 탭일 때 사용) -->
+    <div class="tab-panel" id="panel-markdown" role="tabpanel" aria-label="여행 문서"></div>
+
+    <!-- 비교 패널 (정적) -->
+    <section class="compare-panel" id="panel-compare" role="tabpanel" aria-label="남양주 vs 수원 비교">
+
+      <div class="compare-intro">
+        <h2>⚖️ 한눈에 보는 두 후보</h2>
+        <p>
+          어머니 66세 생신을 축하하기 위한 5월 16일(토) 당일치기 가족 여행 후보 두 곳을 비교합니다.
+          시니어 2명·미취학 2명을 동반하는 점을 고려해 <strong>평탄한 동선·짧은 보행·여유로운 식사</strong>를 공통 기준으로 정리했습니다.
+        </p>
+      </div>
+
+      <!-- 요약 카드 2개 -->
+      <div class="compare-summary-grid">
+        <article class="summary-card" data-color="green">
+          <h3 class="summary-card-title">🌿 남양주</h3>
+          <p class="summary-card-sub">한강 수변·다산 유적 · 자연 중심</p>
+          <dl class="summary-card-rows">
+            <dt>컨셉</dt><dd>물·꽃·역사가 어우러진 차분한 자연 코스</dd>
+            <dt>메인 식당</dt><dd>초대한정식·운길산콩마을·소리소 중 1택 (3안)</dd>
+            <dt>메인 명소</dt><dd>물의정원, 다산 유적지, 능내역, 수종사</dd>
+            <dt>추천 포인트</dt><dd>여유로운 식사, 한강뷰 카페, 가성비 있는 자연 풍경</dd>
+          </dl>
+        </article>
+
+        <article class="summary-card" data-color="pink">
+          <h3 class="summary-card-title">🌸 수원</h3>
+          <p class="summary-card-sub">도시 문화재·갈비 한 끼 · 이벤트 중심</p>
+          <dl class="summary-card-rows">
+            <dt>컨셉</dt><dd>광교 산책 + 행궁 문화 체험의 짜임새 있는 코스</dd>
+            <dt>메인 식당</dt><dd>가보정 갈비 (1인 4.5만원, 8인룸·케이크 반입)</dd>
+            <dt>메인 명소</dt><dd>광교호수공원, 화성행궁(무예24기), 행리단길</dd>
+            <dt>추천 포인트</dt><dd>무예24기 시연·신풍루 단체사진·손편지 낭독 등 이벤트 풍부</dd>
+          </dl>
+        </article>
+      </div>
+
+      <!-- 항목별 비교표 -->
+      <div class="compare-table-wrap">
+        <h3>항목별 비교</h3>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th scope="col">항목</th>
+              <th scope="col" class="col-namyangju">🌿 남양주</th>
+              <th scope="col" class="col-suwon">🌸 수원</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">날짜·형식</th>
+              <td>2026-05-16 (토) · 당일치기</td>
+              <td>2026-05-16 (토) · 당일치기</td>
+            </tr>
+            <tr>
+              <th scope="row">인원</th>
+              <td>8명 (시니어 2 · 성인 4 · 미취학 2)</td>
+              <td>동일</td>
+            </tr>
+            <tr>
+              <th scope="row">이동</th>
+              <td>서울 → 남양주 조안면 · 자차 2대</td>
+              <td>서울 → 수원 (약 45 km) · 자차 2대</td>
+            </tr>
+            <tr>
+              <th scope="row">핵심 컨셉</th>
+              <td>한강 수변·다산 유적, 자연 중심</td>
+              <td>도시 문화재·갈비 한 끼, 이벤트 중심</td>
+            </tr>
+            <tr>
+              <th scope="row">메인 식당</th>
+              <td>초대한정식 · 운길산콩마을 · 소리소 (3안 비교)</td>
+              <td>가보정 갈비 (1인 4.5만원 · 8인룸)</td>
+            </tr>
+            <tr>
+              <th scope="row">메인 명소</th>
+              <td>물의정원, 다산 유적지, 능내역, 수종사</td>
+              <td>광교호수공원, 화성행궁, 행리단길</td>
+            </tr>
+            <tr>
+              <th scope="row">생신 이벤트</th>
+              <td>한강뷰 카페에서 가족사진 · 다산기념관 함께 관람</td>
+              <td>무예24기 시연 · 신풍루 단체사진 · 손편지 낭독</td>
+            </tr>
+            <tr>
+              <th scope="row">보행·동선</th>
+              <td>평탄, 자연 산책 위주 (체류 중심)</td>
+              <td>약 3.5 km · 휴식 4회 · 계단 회피 동선</td>
+            </tr>
+            <tr>
+              <th scope="row">우천 Plan B</th>
+              <td>다산기념관 + 카페 장체류</td>
+              <td>광교박물관 · 갤러리아 광교 (실내 동선)</td>
+            </tr>
+            <tr>
+              <th scope="row">시니어·미취학 친화도</th>
+              <td>높음 — 짧은 산책·여유 식사·자연 휴식</td>
+              <td>높음 — 평탄 동선·휴식 포인트·계단 회피</td>
+            </tr>
+            <tr>
+              <th scope="row">총 예상비 <small>(참고)</small></th>
+              <td>약 65.5만원 (표준안)</td>
+              <td>약 74.6만원 (보통형)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 타임라인 비교 -->
+      <div class="compare-timelines">
+        <article class="timeline-card" data-color="green">
+          <h3>🌿 남양주 하루</h3>
+          <ul class="timeline-list">
+            <li class="timeline-item"><span class="timeline-time">08:30</span> <strong>서울 출발</strong> · 자차 2대 동시 출발</li>
+            <li class="timeline-item"><span class="timeline-time">09:30</span> <strong>물의정원</strong> · 한강·양귀비밭 산책</li>
+            <li class="timeline-item"><span class="timeline-time">11:30</span> <strong>점심</strong> · 초대한정식 등 8인룸 식사</li>
+            <li class="timeline-item"><span class="timeline-time">14:00</span> <strong>다산 유적지</strong> · 기념관·생가 관람</li>
+            <li class="timeline-item"><span class="timeline-time">16:30</span> <strong>능내역 카페</strong> · 한강뷰 가족사진</li>
+            <li class="timeline-item"><span class="timeline-time">18:00</span> <strong>귀가</strong></li>
+          </ul>
+        </article>
+
+        <article class="timeline-card" data-color="pink">
+          <h3>🌸 수원 하루</h3>
+          <ul class="timeline-list">
+            <li class="timeline-item"><span class="timeline-time">09:00</span> <strong>서울 출발</strong> · 토요 정체 회피</li>
+            <li class="timeline-item"><span class="timeline-time">10:00</span> <strong>광교호수공원</strong> · 신대호수 데크 1 km</li>
+            <li class="timeline-item"><span class="timeline-time">11:30</span> <strong>가보정 갈비</strong> · 8인룸·케이크·꽃다발</li>
+            <li class="timeline-item"><span class="timeline-time">14:00</span> <strong>무예24기 시연</strong> · 신풍루 앞 40분</li>
+            <li class="timeline-item"><span class="timeline-time">15:30</span> <strong>화성행궁</strong> · 봉수당·낙남헌 단체사진</li>
+            <li class="timeline-item"><span class="timeline-time">16:00</span> <strong>행리단길 카페</strong> · 손편지 낭독</li>
+            <li class="timeline-item"><span class="timeline-time">17:10</span> <strong>귀가</strong></li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- 추천 -->
+      <div class="compare-recommend-grid">
+        <article class="recommend-card" data-color="green">
+          <h3>🌿 남양주가 어울리는 경우</h3>
+          <ul>
+            <li>걷는 거리를 더 줄이고 식사·휴식·풍경에 시간을 더 쓰고 싶을 때</li>
+            <li>이벤트성 일정보다 차분한 자연 풍경을 선호할 때</li>
+            <li>예산 여유가 적고 가성비 있는 한 끼를 원할 때</li>
+            <li>혼잡한 도심·인파를 피하고 싶을 때</li>
+          </ul>
+        </article>
+
+        <article class="recommend-card" data-color="pink">
+          <h3>🌸 수원이 어울리는 경우</h3>
+          <ul>
+            <li>생신을 기념할 사진·이벤트 포인트가 풍부한 코스를 원할 때</li>
+            <li>가족 단체룸이 잘 갖춰진 갈비 한 끼로 분위기를 내고 싶을 때</li>
+            <li>무예24기 시연 등 문화 체험이 있는 동선을 선호할 때</li>
+            <li>식대·이벤트에 예산을 더 쓸 의향이 있을 때</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-note">
+        🤖 AI 여행 계획 하네스(travel-planner)로 자동 생성 &nbsp;·&nbsp; 여행일 2026-05-16
+      </p>
+      <p class="footer-warning">
+        ⚠️ 운영시간·예약·교통 등 변동 정보는 출발 전 각 시설에 반드시 재확인하세요.
+      </p>
+    </div>
+  </footer>
+
+  <!-- 맨 위로 버튼 -->
+  <button id="back-to-top" aria-label="페이지 맨 위로 이동" title="맨 위로">↑</button>
+
+  <!-- 라이브러리 + 앱 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/marked@9/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -7,11 +7,11 @@
 const TRAVEL_DATE = new Date('2026-04-28T00:00:00');
 
 const TABS = [
-  { id: 'input',     file: '_workspace/00_input.md',                emoji: '📝', label: '입력',        color: 'neutral' },
-  { id: 'analysis',  file: '_workspace/01_destination_analysis.md', emoji: '🌷', label: '목적지 분석', color: 'pink'    },
-  { id: 'itinerary', file: '_workspace/02_itinerary.md',            emoji: '📅', label: '일정표',      color: 'green'   },
-  { id: 'budget',    file: '_workspace/04_budget.md',               emoji: '💰', label: '예산',        color: 'yellow'  },
-  { id: 'guide',     file: '_workspace/05_local_guide.md',          emoji: '🗺️', label: '현지 가이드',  color: 'blue'    },
+  { id: 'input',     file: '../00_input.md',                emoji: '📝', label: '입력',        color: 'neutral' },
+  { id: 'analysis',  file: '../01_destination_analysis.md', emoji: '🌷', label: '목적지 분석', color: 'pink'    },
+  { id: 'itinerary', file: '../02_itinerary.md',            emoji: '📅', label: '일정표',      color: 'green'   },
+  { id: 'budget',    file: '../04_budget.md',               emoji: '💰', label: '예산',        color: 'yellow'  },
+  { id: 'guide',     file: '../05_local_guide.md',          emoji: '🗺️', label: '현지 가이드',  color: 'blue'    },
 ];
 
 // 마크다운 fetch 결과 Promise 캐시 (중복 요청 방지)
